@@ -1,7 +1,7 @@
 # Number-Guessing-Game
 ###### How to Run it?
 1. download and install it on the rust installation, you can get it here: https://www.rust-lang.org/tools/install
-2. You can simply run it like this: '#e3e3e3' cargo run
+2. You can simply run it like this: `#e3e3e3` cargo run
 
 ###### How to play it?
 
