@@ -1,9 +1,9 @@
 # Number-Guessing-Game
-How to Run it?
+###### How to Run it?
 1. download and install it on the rust installation, you can get it here: https://www.rust-lang.org/tools/install
-2. You can simply run it like this: 'cargo run'
+2. You can simply run it like this: cargo run
 
-How to play it?
+###### How to play it?
 
 You can choose any letter from [a-z], you only need to enter lowercase letters in your terminal.
 
