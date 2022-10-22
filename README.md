@@ -1,4 +1,4 @@
-# Number-Guessing-Game
+# Number Guessing Game
 ###### How to Run it?
 1. download and install it on the rust installation, you can get it here: [VISIT](https://www.rust-lang.org/tools/install)
 2. You can simply run it like this: `cargo run`
