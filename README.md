@@ -2,6 +2,7 @@
 ###### How to Run it?
 1. download and install it on the rust installation, you can get it here: [VISIT](https://www.rust-lang.org/tools/install)
 2. You can simply run it like this: `cargo run`
+3. Type: `PLAY`
 
 ###### How to play it?
 
