@@ -6,7 +6,7 @@
 
 ###### How to play it?
 
-You can choose any letter from [a-z], you only need to enter lowercase letters in your terminal.
+You can choose any letter from [a-d], you only need to enter lowercase letters in your terminal.
 
 If your guess: Terlalu rendah!
 with yellow,
