@@ -2,15 +2,33 @@ use std::io;
 use ansi_term::Colour;
 use rand::Rng;
 use std::cmp::Ordering;
+use std::string::String;
 
 fn main() {
+
+    println!("\x1B[2J\x1B[1;1H");
+
+    println!("{}\n", Colour::Purple.bold().paint("====================================="));
+    println!("{}", Colour::Cyan.bold().paint("Selamat Datang Di Game Tebak-Tebakan"));
+    println!("{} {}", 
+    Colour::Cyan.bold().paint("Ketik: PLAY"),
+    Colour::Yellow.paint("\"Untuk Memulai\""));
+    println!("\n{}", Colour::Purple.bold().paint("====================================="));
+
+    println!("\n\n{}", Colour::Blue.bold().paint("Comment:"));
+
+    let mut play = String::new();
+
+    io::stdin().read_line(&mut play).expect("Failed read to line");
+
+    if play.to_lowercase().trim() == "play"{
+        println!("\x1B[2J\x1B[1;1H");
+    loop{
     let acak = rand::thread_rng().gen_range(1..=4);
     let jawaban = rand::thread_rng().gen_range(1..=100);
     let secret_number1 = rand::thread_rng().gen_range(1..=100);
     let secret_number2 = rand::thread_rng().gen_range(1..=100);
     let secret_number3 = rand::thread_rng().gen_range(1..=100);
-
-    println!("\x1B[2J\x1B[1;1H");
 
     println!("{}", Colour::Blue.bold().paint("Pilih Salah Satu!"));
     if acak == 1{
@@ -37,7 +55,7 @@ fn main() {
 
     println!("\n{}", Colour::Cyan.bold().paint("Jawaban:"));
 
-    let mut nilai = String::new();
+    let mut nilai = String::new().to_lowercase();
 
     io::stdin().read_line(&mut nilai).expect("Failed to read line!");
 
@@ -108,9 +126,15 @@ println!("\nJawaban mu: {}", soal);
 match soal.cmp(&jawaban){
     Ordering::Less => println!("{}", Colour::Yellow.paint("Terlalu rendah!")),
     Ordering::Greater => println!("{}", Colour::Cyan.bold().paint("Terlalu tinggi!")),
-    Ordering::Equal => println!("{}", Colour::Green.bold().paint("Win"))
+    Ordering::Equal => {
+        println!("{}", Colour::Green.bold().paint("Win"));
+        println!("\n================");
+        break;
+    }
 };
 
 println!("\n================");
+}
+}
     
 }
